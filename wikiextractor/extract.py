@@ -603,7 +603,7 @@ class MagicWords():
         '__NOTOC__',
         '__FORCETOC__',
         '__TOC__',
-        '__TOC__',
+        '__NOEDITSECTION__',
         '__NEWSECTIONLINK__',
         '__NONEWSECTIONLINK__',
         '__NOGALLERY__',
@@ -617,7 +617,8 @@ class MagicWords():
         '__INDEX__',
         '__NOINDEX__',
         '__STATICREDIRECT__',
-        '__DISAMBIG__'
+        '__DISAMBIG__',
+        '__NOGLOBAL__',
     )
 
 

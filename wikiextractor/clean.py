@@ -39,7 +39,7 @@ def clean_markup(markup, keep_links=False, ignore_headers=True):
     paragraphs = extractor.clean_text(markup,
                                       mark_headers=True,
                                       expand_templates=False,
-                                      escape_doc=True)
+                                      )
     resetIgnoredTags()
 
     if ignore_headers:
