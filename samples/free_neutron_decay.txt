@@ -1,0 +1,403 @@
+{{Short description|Decay of a neutron when outside a nucleus}}
+{{use dmy dates |date=August 2021}}
+{{context|date=January 2023}}
+[[Image:Beta-minus Decay.svg|thumb|300px| A [[schematic]] of the [[atomic nucleus|nucleus of an atom]] indicating {{SubatomicParticle|Beta-}} radiation, the emission of a fast electron from the nucleus (the accompanying antineutrino is omitted). In the Rutherford model for the nucleus, red spheres were protons with positive charge and blue spheres were protons [[Atomic number|tightly bound to an electron with no net charge]].
+:
+The '''inset''' shows beta decay of a free neutron as it is understood today; an electron and antineutrino are created in this process.]]
+
+When embedded in an [[atomic nucleus]], [[neutrons]] are (usually) stable particles. Outside the [[atomic nucleus|nucleus]], free [[neutron]]s are unstable and have a [[mean lifetime]] of {{val|879.6|0.8|u=[[second|s]]}} (about {{val|14|u=minutes}}, {{val|39.6|u=seconds}}).<ref name=PDG-2020-n-life/> Therefore, the [[half-life]] for this process (which differs from the mean lifetime by a factor of {{math|[[Natural logarithm|ln]](2) ≈ 0.693}}) is {{val|611|1|u=s}} (about {{val|10|u=minutes}}, {{val|11|u=seconds}}).<ref name=Beringer-etal-2012-PDG-010001/><ref name=PDG-2007-baryons-LPL/> (An  article<ref name=Gonzalez-2021/> published in October 2021, arrives at {{val|877.75|0.50|0.44|u=s}} for the mean lifetime). 
+
+The [[beta decay]] of the neutron described in this article can be notated at four slightly different levels of detail, as shown in four layers of [[Feynman diagrams]] in a [[##multilayered Feynman diagrams anchor|section below]].
+
+: {{math| {{SubatomicParticle|Neutron0|link=yes}} → {{SubatomicParticle|Proton+|link=yes}} +  {{SubatomicParticle|Electron|link=yes}} + {{SubatomicParticle|Electron antineutrino|link=yes}} }}
+
+The hard-to-observe {{math| {{SubatomicParticle|W boson-}} }} quickly decays into an [[electron]] and its matching [[electron antineutrino|antineutrino]]. The subatomic reaction shown immediately above depicts the process as it was first understood, in the first half of the 20th&nbsp;century. The [[W and Z bosons|boson]] ({{math| {{SubatomicParticle|W boson-|link=yes}} }}) vanished so quickly that it was not detected until much later.
+Later, beta decay was understood to occur by the emission of a [[weak boson]] ({{math| {{SubatomicParticle|W boson+-|link=yes}} }}), sometimes called a charged [[weak interaction|weak current]]. Beta decay specifically involves the emission of a {{math| {{SubatomicParticle|W boson-|link=yes}} }} boson from one of the [[down quark]]s hidden within the [[neutron]], thereby converting the down quark into an [[up quark]] and consequently the [[neutron]] into a [[proton]]. The following diagram gives a summary sketch of the beta decay process according to the present level of understanding.
+
+[[File:Beta Negative Decay.svg|thumb|[[Feynman diagram]] for beta decay of the neutron]]
+
+{|  style="text-align:left;vertical-align:bottom;"
+|-
+|style="text-align:center"| {{small|3&nbsp;quark composite<br/>}} {{small|[[neutron]]}} ({{math| {{subatomic particle|neutron0|link=yes}} }})
+| 
+|style="text-align:center"| {{small|3&nbsp;quark composite<br/>}}  {{small|[[proton]]}} ({{math| {{subatomic particle|proton+|link=yes}} }})
+| 
+| 
+| 
+| 
+|-
+| {{big| &nbsp;&nbsp;&nbsp; {{math| ︷ }} }}
+| 
+| {{big| &nbsp;&nbsp; {{math| ︷ }} }}
+| 
+| 
+| 
+| 
+|-
+| &nbsp;&nbsp; {{math| ({{SubatomicParticle|Up quark|link=yes}}{{SubatomicParticle|Down quark|link=yes}}'''{{SubatomicParticle|Down quark|link=yes}}''') }}
+| {{big| {{math| → }} }} &nbsp;
+| &nbsp; {{math| ({{SubatomicParticle|Up quark|link=yes}}{{SubatomicParticle|Down quark|link=yes}}'''{{SubatomicParticle|Up quark|link=yes}}''') }}
+| + &nbsp;&nbsp;
+| &nbsp; {{math| {{SubatomicParticle|W boson-|link=yes}}      }}
+| 
+| 
+| 
+|-
+|
+|
+|
+|
+| {{big| &nbsp;&nbsp; {{math| ⤷ }} }}
+| {{SubatomicParticle|Electron|link=yes}}
+|
+|  + &nbsp; {{math|{{SubatomicParticle|Electron antineutrino|link=yes}}}}
+|-
+| 
+| 
+| 
+| 
+| {{big| &nbsp; {{math| ︸ }} }}
+| 
+| 
+|-
+| 
+| 
+| 
+| 
+|colspan=3|{{small|subsequent<br/>}} {{math| {{SubatomicParticle|W boson-|link=yes}} }} {{small| decay }} 
+|}
+:{{small|The [[down quark]] shown in bold ({{math|'''{{SubatomicParticle|Down quark|link=yes}}'''}}) is nominally the one emitting the boson ({{math| {{SubatomicParticle|W boson-|link=yes}} }}) and thereby changing into an [[up quark]] ({{math|'''{{SubatomicParticle|up quark|link=yes}}'''}}), also in bold. The {{math|{{SubatomicParticle|up quark|link=yes}}}}{{math|{{SubatomicParticle|Down quark|link=yes}}}} quark pair ''not'' shown in bold are inert bystanders to the whole event.}}
+
+For diagrams at several levels of detail, see [[##multilayered Feynman diagrams anchor|'''§ Decay process''']], below.
+:
+
+==Energy budget==
+For the free neutron, the [[decay energy]] for this process (based on the [[rest mass]]es of the neutron, proton and electron) is {{val|0.782343|u=MeV}}. That is the difference between the rest mass of the neutron and the sum of the rest masses of the products. That difference has to be carried away as [[kinetic energy]]. The maximal energy of the beta decay electron (in the process wherein the neutrino receives a vanishingly small amount of kinetic energy) has been measured at {{val|0.782|0.013|u=MeV}}.<ref name=Heyde-2004-BasNuc/> The latter number is not well-enough measured to determine the comparatively tiny rest mass of the [[neutrino]] (which must in theory be subtracted from the maximal electron kinetic energy); furthermore, neutrino mass is constrained by many other methods.
+
+A small fraction (about 1 in 1,000) of free neutrons decay with the same products, but add an extra particle in the form of an emitted [[gamma ray]]:
+
+:{{math| {{SubatomicParticle|Neutron0|link=yes}} → {{SubatomicParticle|Proton+|link=yes}} + {{SubatomicParticle|Electron|link=yes}} + {{SubatomicParticle|Electron antineutrino|link=yes}} + {{SubatomicParticle|Photon|link=yes}} }}
+
+This gamma ray may be thought of as a sort of "internal [[bremsstrahlung]]" that arises as the emitted beta particle (electron) interacts with the [[electric charge|charge]] of the proton in an electromagnetic way. In this process, some of the decay energy is carried away as [[photon energy]]. Gamma rays produced in this way are also a minor feature of beta decays of bound neutrons, that is, those within a nucleus.
+
+A very small minority of neutron decays (about four per million) are so-called "two-body (neutron) decays", in which a proton, electron and antineutrino are produced as usual, but the electron fails to gain the 13.6&nbsp;eV necessary energy to escape the proton (the [[ionization energy]] of [[hydrogen]]), and therefore simply remains bound to it, as a neutral [[hydrogen atom]] (one of the "two bodies"). In this type of free neutron decay, in essence all of the neutron decay energy is carried off by the antineutrino (the other "body").
+
+The transformation of a free proton to a neutron (plus a positron and a neutrino) is energetically impossible, since a free neutron has a greater mass than a free proton. However, see [[proton decay]].
+
+==Decay process viewed from multiple levels{{anchor|#multilayered_Feynman_diagrams_anchor}}==
+Understanding of the beta decay process developed over several years, with the initial understanding of [[Enrico Fermi]] and colleagues starting at the "superficial" first level in the diagram below. Current understanding of weak processes rest at the fourth level, at the bottom of the chart, where the [[nucleons]] (the [[neutron]] and its successor [[proton]]) are largely ignored, and attention focuses only on the interaction between two quarks and a charged boson, with the decay of the boson almost treated as an afterthought. Because the charged [[weak boson]] ({{math|{{SubatomicParticle|W boson-|link=yes}}}}) vanishes so quickly, it was not actually observed during the first half of the 20th century, so the diagram at level&nbsp;1 omits it; even at present it is for the most part inferred by its after-effects.
+
+{{clear}}
+:{|  style="text-align:left;vertical-align:bottom;"
+|-
+|colspan=9| {{left| 1 {{small|superficial}} '''{{sc|baryon}}''' {{small|level}}  }}
+| &nbsp;
+|-
+| {{math| {{SubatomicParticle|Neutron0|link=yes}} }}
+| {{big| {{math| → }} }}
+| {{math| {{SubatomicParticle|Proton+|link=yes}} }}
+| + 
+| 
+| {{math| {{SubatomicParticle|Electron|link=yes}} }}
+| 
+| + &nbsp; {{math| {{SubatomicParticle|Electron antineutrino|link=yes}} }}
+| &nbsp;
+| &nbsp;&nbsp;{{small| The [[neutron]] ({{math|{{SubatomicParticle|Neutron0|link=yes}}}}) emits an [[electron]] ({{math|{{SubatomicParticle|Electron|link=yes}}}}) and its [[antineutrino]] ({{math|{{SubatomicParticle|Electron antineutrino|link=yes}}}}) and becomes a proton ({{math|{{SubatomicParticle|Proton+|link=yes}}}}). }}
+|-
+|colspan=9| <br/>{{left| 2 {{small|deeper}} '''{{sc|boson}}''' level }}
+|
+|-
+| {{math| {{SubatomicParticle|Neutron0|link=yes}} }}
+| {{big| {{math| → }} }}
+| {{math| {{SubatomicParticle|Proton+|link=yes}} }}
+| 
+| + &nbsp; {{math| {{SubatomicParticle|W boson-|link=yes}} }}
+| 
+|
+|
+| 
+| &nbsp;&nbsp;{{small|The [[neutron]] ({{math|{{SubatomicParticle|Neutron0|link=yes}}}}) emits a {{math|{{SubatomicParticle|W boson-|link=yes}}}} boson and becomes a proton ({{math|{{SubatomicParticle|Proton+|link=yes}}}}).}}
+|-
+|
+|
+|
+|
+| {{big| &nbsp; {{math| ⤷ }} }}
+| {{math| {{SubatomicParticle|Electron|link=yes}} }}
+| 
+| + &nbsp; {{math| {{SubatomicParticle|Electron antineutrino|link=yes}} }}
+| 
+| &nbsp;&nbsp;{{small|The {{SubatomicParticle|W boson-|link=yes}} [[boson]] decays into an [[electron]] ({{math|{{SubatomicParticle|Electron|link=yes}}}}) and its [[antineutrino]] ({{math|{{SubatomicParticle|Electron antineutrino|link=yes}}}}).}}
+|-
+|colspan=9| <br/> {{left| 3 {{small|deeper still}} {{small|intra-}}[[nucleon|'''{{sc|nucleon}}''']] {{small|level}}  }}&nbsp;&nbsp;&nbsp;
+| 
+|-
+| {{math| ({{SubatomicParticle|Up quark|link=yes}}{{SubatomicParticle|Down quark|link=yes}}'''{{SubatomicParticle|Down quark|link=yes}}''') }}
+| {{big| {{math| → }} }}
+| {{math| ({{SubatomicParticle|Up quark|link=yes}}{{SubatomicParticle|Down quark|link=yes}}'''{{SubatomicParticle|Up quark|link=yes}}''')   }}
+| + 
+| {{math| {{SubatomicParticle|W boson-|link=yes}}      }}
+|
+|
+|
+| 
+| &nbsp;&nbsp;{{small|One of the down quarks in the neutron emits a {{math| {{SubatomicParticle|W boson-|link=yes}} }} boson and becomes an up quark.}}
+|-
+|
+|
+|
+|
+| {{big| &nbsp; {{math| ⤷ }} }}
+| {{SubatomicParticle|Electron|link=yes}}
+|
+|  + &nbsp; {{math|{{SubatomicParticle|Electron antineutrino|link=yes}}}}
+| 
+| &nbsp;&nbsp;{{small|The {{SubatomicParticle|W boson-|link=yes}} [[boson]] decays into an [[electron]] ({{math|{{SubatomicParticle|Electron|link=yes}}}}) and its [[antineutrino]] ({{math|{{SubatomicParticle|Electron antineutrino|link=yes}}}}).}}
+|-
+|colspan=9| <br/> {{left| 4 {{small|deepest}} '''{{sc|quark}}''' {{small|level}} }}
+|
+|-
+| {{math| '''{{SubatomicParticle|Down quark|link=yes}}''' }}
+| {{big| {{math| → }} }}
+| {{math| '''{{SubatomicParticle|Up quark|link=yes}}'''   }}
+| + 
+| {{math| {{SubatomicParticle|W boson-|link=yes}}         }}
+| 
+| 
+| 
+| 
+| &nbsp;&nbsp;{{small|A down quark ({{math|'''{{SubatomicParticle|Down quark|link=yes}}'''}}) emits a {{math|{{SubatomicParticle|W boson-|link=yes}}}} boson and becomes an up quark ({{math| '''{{SubatomicParticle|Up quark|link=yes}}'''}}).}}
+|-
+| 
+| 
+| 
+| 
+| {{big| &nbsp; {{math| ⤷ }} }}
+| {{math| {{SubatomicParticle|Electron|link=yes}} }}
+| 
+| + &nbsp; {{math| {{SubatomicParticle|Electron antineutrino|link=yes}} }}
+| 
+| &nbsp;&nbsp;{{small|The {{SubatomicParticle|W boson-|link=yes}} [[boson]] decays into an [[electron]] ({{math|{{SubatomicParticle|Electron|link=yes}}}}) and its [[antineutrino]] ({{math|{{SubatomicParticle|Electron antineutrino|link=yes}}}}).}}
+|}
+<br/>
+
+==Neutron lifetime puzzle==
+While the neutron lifetime has been studied for decades, there currently exists a lack of [[consilience]] on its exact value, due to different results from two experimental methods ("bottle" versus "beam"<ref name=Wolchover-2018-02-13-Quanta/>{{efn|
+name=Wolchover-2018-02-13-summary|
+When physicists strip neutrons from atomic nuclei, put them in a bottle, then count how many remain there after some time, they infer that neutrons radioactively decay in 14<sup>m</sup>39<sup>s</sup>, on average. But when other physicists generate beams of neutrons and tally the emerging protons — the particles that free neutrons decay into — they peg the average neutron lifetime at around 14<sup>m</sup>48<sup>s</sup>. The discrepancy between the "bottle" and "beam" measurements has persisted {{grey|[ever]}} since both methods of gauging the neutron's longevity began yielding results in the 1990s. At first, all the measurements were so imprecise that nobody worried. Gradually, though, both methods have improved, and still they {{nowrap|disagree. — Wolchover (2018)<ref name=Wolchover-2018-02-13-Quanta/>}}
+}}).
+The "neutron lifetime anomaly" was discovered after the refinement of experiments with ultracold neutrons.<ref name=Serebrov-Fomin-2011/> While the [[error margin]] was once overlapping, increasing refinement in technique which should have resolved the issue has failed to demonstrate convergence to a single value.<ref name=Paul-2009/><ref name=Moskowitz-2014/><ref name=Greene-Geltenbort-2016/><ref name=Mumm-2018/> The difference in mean lifetime values obtained as of 2014 was approximately 9 seconds.<ref name=Moskowitz-2014/> Further, a prediction of the value based on [[quantum chromodynamics]] as of 2018 is still not sufficiently precise to support one over the other.<ref name=Brookhaven-2018-05-30-PrssRls/>{{efn|
+name=Rinaldi-2018-05-30-quote|
+The scientists have already used the new nucleon axial coupling calculation to derive a purely theoretical prediction of the lifetime of the neutron. Right now, this new value is consistent with the results from both types of experimental measurement, which differ by a mere 9<sup>sec</sup>.
+: "We have a number for the neutron lifetime: 14<sup>m</sup>40<sup>s</sup>, with an error bar of 14<sup>s</sup>. That is right in the middle of the values measured by the two types of experiments, with an error bar that is big, and overlaps both,"
+Rinaldi said.<ref name=Brookhaven-2018-05-30-PrssRls/>
+}}
+As explained by Wolchover (2018),<ref name=Wolchover-2018-02-13-Quanta/> the beam test would be incorrect if there is a decay mode that does not produce a proton. 
+
+On 13 October 2021 the lifetime from the bottle method was updated to <math>\tau_n=877.75 s</math><ref>{{Cite web|date=2021-10-13|title=How Long Does a Neutron Live?|url=https://www.caltech.edu/about/news/how-long-does-a-neutron-live|access-date=2021-10-14|website=California Institute of Technology|language=en}}</ref><ref name=Gonzalez-2021/> increasing the difference to 10 seconds below the beam method value of <math>\tau_n=887.7 s</math><ref>{{Cite journal|last1=Wilson|first1=Jack T.|last2=Lawrence|first2=David J.|last3=Peplowski|first3=Patrick N.|last4=Eke|first4=Vincent R.|last5=Kegerreis|first5=Jacob A.|date=2021-10-13|title=Measurement of the free neutron lifetime using the neutron spectrometer on NASA's Lunar Prospector mission|url=https://link.aps.org/doi/10.1103/PhysRevC.104.045501|journal=Physical Review C|volume=104|issue=4|pages=045501|doi=10.1103/PhysRevC.104.045501| arxiv=2011.07061|bibcode=2021PhRvC.104d5501W|s2cid=226955795}}</ref><ref>{{Cite journal|last=Anonymous|date=2013-11-27|title=Discrepancy in Neutron Lifetime Still Unresolved|url=https://physics.aps.org/articles/v6/s150|journal=Physics|language=en|volume=6|doi=10.1103/Physics.6.s150|bibcode=2013PhyOJ...6S.150.}}</ref> and also on the same date a novel third method using data from the past NASA's [[Lunar Prospector|Lunar prospector]] mission reported a value of <math>\tau_n=887 s</math><ref>{{Cite journal|last1=Wilson|first1=Jack T.|last2=Lawrence|first2=David J.|last3=Peplowski|first3=Patrick N.|last4=Eke|first4=Vincent R.|last5=Kegerreis|first5=Jacob A.|date=2021-10-13|title=Measurement of the free neutron lifetime using the neutron spectrometer on NASA's Lunar Prospector mission|url=https://link.aps.org/doi/10.1103/PhysRevC.104.045501|journal=Physical Review C|language=en|volume=104|issue=4|pages=045501|doi=10.1103/PhysRevC.104.045501| arxiv=2011.07061 |bibcode=2021PhRvC.104d5501W|s2cid=226955795|issn=2469-9985}}</ref><ref>{{Cite journal|last1=Lawrence|first1=David J.|last2=Wilson|first2=Jack T.|last3=Peplowski|first3=Patrick N.|date=1 February 2021|title=Space-based measurements of neutron lifetime: Approaches to resolving the neutron lifetime anomaly|url=https://linkinghub.elsevier.com/retrieve/pii/S0168900220313164|journal=Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment|language=en|volume=988|pages=164919|doi=10.1016/j.nima.2020.164919|arxiv=2011.06095|bibcode=2021NIMPA.98864919L|s2cid=226307043}}</ref> but with great uncertainty.
+
+Yet another approach similar to the beam method has been explored with the [[J-PARC|Japan Proton Accelerator Research Complex]] (J-PARC) but it is too imprecise at the moment to be of significance on the analysis of the discrepancy.<ref>{{Cite journal|last1=Hirota|first1=K|last2=Ichikawa|first2=G|last3=Ieki|first3=S|last4=Ino|first4=T|last5=Iwashita|first5=Y|last6=Kitaguchi|first6=M|last7=Kitahara|first7=R|last8=Koga|first8=J|last9=Mishima|first9=K|last10=Mogi|first10=T|last11=Morikawa|first11=K|date=2020-12-15|title=Neutron lifetime measurement with pulsed cold neutrons|url=https://academic.oup.com/ptep/article/doi/10.1093/ptep/ptaa169/6020274|journal=Progress of Theoretical and Experimental Physics|language=en|volume=2020|issue=12|pages=123C02|doi=10.1093/ptep/ptaa169|arxiv=2007.11293|issn=2050-3911}}</ref><ref>{{Cite web|date=2021-07-02|title=KEK tackles neutron-lifetime puzzle|url=https://cerncourier.com/a/kek-tackles-neutron-lifetime-puzzle/|access-date=2021-12-02|website=CERN Courier|language=en-GB}}</ref>
+
+==See also==
+* [[Halbach array]]-used in the "bottle" method
+
+==Footnotes==
+{{notelist}}
+
+==References==
+{{reflist |25em |refs=
+
+<ref name=Beringer-etal-2012-PDG-010001>
+{{cite journal
+ |first1=J. |last1=Beringer
+ |display-authors=etal
+ |collaboration=[[Particle Data Group]]
+ |year=2012
+ |title=Summary of baryons
+ |journal=Phys. Rev. D
+ |volume=86 |page=010001
+ |doi=10.1103/PhysRevD.86.010001
+ |s2cid=118588567
+ |url=http://pdg.lbl.gov/2012/tables/rpp2012-sum-baryons.pdf
+}}
+</ref>
+
+{{refn|name=Brookhaven-2018-05-30-PrssRls|
+{{cite press release
+ |url=https://www.bnl.gov/newsroom/news.php?a=112787
+ |title=Nuclear scientists calculate value of key property that drives neutron decay
+ |authors={{grey|[press office]}}  <!-- no byline -->
+ |date=30 May 2018
+ |website=[[Brookhaven National Laboratory]]
+ |access-date=31 July 2018
+}}
+<!-- — ''see quote:''{{efn|name=Rinaldi-2018-05-30-quote}}  -->
+}}
+
+<ref name=Greene-Geltenbort-2016>
+{{cite journal
+ |last1=Greene     |first1=Geoffrey L.
+ |last2=Geltenbort |first2=Peter
+ |year=2016
+ |title=The Neutron Enigma
+ |journal=[[Scientific American]]
+ |volume=314  |issue=4  |pages=36–41
+ |issn=0036-8733   |doi=10.1038/scientificamerican0416-36
+ |pmid=27082189  |bibcode=2016SciAm.314d..36G  |osti=1481712
+}}
+</ref>
+
+<ref name=Heyde-2004-BasNuc>
+{{cite book
+ |first=K.  |last=Heyde
+ |year=2004
+ |title=Basic Ideas and Concepts in Nuclear Physics: An introductory approach
+ |edition=third
+ |publisher=Taylor & Francis
+ |doi=10.1201/9781420054941.ch5
+ |isbn=9780-7503-0980-6
+ |url=https://archive.today/20130119175702/http://www.crcnetbase.com/doi/abs/10.1201/9781420054941.ch5
+ |via=archive.today
+}} — link is to archived ch.&nbsp;5 text.
+* print {{ISBN|9780-7503-0980-6}}
+* eBook {{ISBN|978-1-4200-5494-1}}
+{{cite book
+ |chapter-url=http://www.crcnetbase.com/doi/abs/10.1201/9781420054941.ch5
+ |archive-url=https://archive.today/20130119175702/http://www.crcnetbase.com/doi/abs/10.1201/9781420054941.ch5
+ |archive-date=2013-01-19
+ |title=archived full text
+ |chapter=Beta-decay
+ |date=July 2004
+ |publisher=Taylor & Francis
+ |doi=10.1201/9781420054941.ch5
+ |isbn=978-0-7503-0980-6
+ |via=archive.today
+}}
+</ref>
+
+<ref name=Moskowitz-2014>
+{{cite journal
+ |last=Moskowitz |first=Clara
+ |year=2014
+ |title=Neutron death mystery has physicists stymied
+ |journal=Nature
+ |issn=1476-4687 |doi=10.1038/nature.2014.15219
+ |s2cid=123870434
+}}
+</ref>
+
+<ref name=Mumm-2018>
+{{cite journal
+ |last=Mumm |first=Pieter
+ |year=2018 
+ |title=Resolving the neutron lifetime puzzle
+ |journal=Science
+ |volume=360  |issue=6389  |pages=605–606
+ |issn=0036-8075  |doi=10.1126/science.aat7140  |pmid=29748273
+ |bibcode=2018Sci...360..605M  |s2cid=206667316
+}}
+</ref>
+
+<ref name=Paul-2009>
+{{cite journal
+ |last=Paul |first=Stephan
+ |year=2009
+ |title=The puzzle of neutron lifetime
+ |journal=Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment
+ |volume=611  |issue=2–3  |pages=157–166
+ |issn=0168-9002  |doi=10.1016/j.nima.2009.07.095
+ |arxiv=0902.0169  |bibcode=2009NIMPA.611..157P  |s2cid=9765336
+}}
+</ref>
+
+<ref name=PDG-2007-baryons-LPL>
+{{cite report
+ |url=http://pdg.lbl.gov/2007/tables/bxxx.pdf
+ |department=Particle Data Group
+ |publisher=[[Lawrence Berkeley Laboratory]]
+ |title=Summary Data Table on Baryons
+ |website=lbl.gov
+ |year=2007
+ |access-date=2012-08-16
+}}
+</ref>
+
+<ref name=PDG-2020-n-life>
+{{cite report
+ |authors=[[Particle Data Group]]
+ |year=2020 
+ |title=Neutron mean life
+ |series=Review of Particle Physics
+ |publisher=[[Lawrence Berkeley Laboratory]]
+ |place=[[Berkeley, California|Berkeley, CA]]
+ |url=https://pdglive.lbl.gov/DataBlock.action?node=S017T
+}}
+</ref>
+
+<ref name=Serebrov-Fomin-2011>
+{{cite journal
+ |last1=Serebrov |first1=A.P.
+ |last2=Fomin    |first2=A.K.
+ |year=2011
+ |title=New evaluation of neutron lifetime from UCN storage experiments and beam experiments
+ |journal=Physics Procedia
+ |volume=17  |pages=199–205
+ |doi=10.1016/j.phpro.2011.06.037 |arxiv=1104.4238
+|bibcode=2011PhPro..17..199S
+ |s2cid=119204009
+ }}
+</ref>
+
+<ref name=Gonzalez-2021>
+{{Cite journal
+|last1=UCNτ Collaboration
+|last2=Gonzalez  |first2=F. M.
+|last3=Fries     |first3=E. M.
+|last4=Cude-Woods|first4=C.
+|last5=Bailey    |first5=T.
+|last6=Blatnik   |first6=M.
+|last7=Broussard |first7=L. J.
+|last8=Callahan  |first8=N. B.
+|last9=Choi      |first9=J. H.
+|last10=Clayton  |first10=S. M.
+|last11=Currie   |first11=S. A.
+|date=2021-10-13
+|title=Improved Neutron Lifetime Measurement with $\mathrm{UCN}\ensuremath{\tau}$
+|url=https://link.aps.org/doi/10.1103/PhysRevLett.127.162501
+|journal=Physical Review Letters
+|volume=127
+|issue=16
+|pages=162501
+|arxiv=2106.10375
+|doi=10.1103/PhysRevLett.127.162501
+|pmid=34723594 |s2cid=235490073 }}
+</ref>
+
+{{refn|name=Wolchover-2018-02-13-Quanta|
+{{cite web
+ |last=Wolchover |first=Natalie
+ |date=13 February 2018
+ |title=Neutron lifetime puzzle deepens, but no dark matter seen
+ |magazine=[[Quanta Magazine]]
+ |access-date=31 July 2018
+ |url=https://www.quantamagazine.org/neutron-lifetime-puzzle-deepens-but-no-dark-matter-seen-20180213/
+}}
+<!-- — ''see'' Wolchover’s summary:{{efn|name=Wolchover-2018-02-13-summary}}. -->
+}}
+
+}} <!-- end "refs=" -->
+
+== Bibliography ==
+*{{cite journal
+ |author=Ерозолимский, Б.Г.
+ |year=1975
+ |title=Бета-распад нейтрона
+ |trans-title=Neutron beta decay
+ |journal=Успехи физических наук
+ |volume=116  |issue=1  |pages=145–164
+ |url=http://ufn.ru/ru/articles/1975/5/e/
+}}
+
+[[Category:Neutron]]
+[[Category:Radioactivity]]
+[[Category:Physical phenomena]]
