@@ -87,7 +87,7 @@ def process_data(input_file, id, templates=False):
         elif tag == '/page':
             if page:
                 page.append(line)
-                print(''.join(page))
+                # print(''.join(page))
                 if not templates:
                     break
             page = []

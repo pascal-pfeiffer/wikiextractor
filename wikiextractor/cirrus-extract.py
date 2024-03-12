@@ -43,9 +43,9 @@ import gzip
 import logging
 
 # Program version
-version = '3.0'
+version = '3.0.1'
 
-urlbase = 'http://it.wikipedia.org/'
+urlbase = 'http://en.wikipedia.org/'
 
 # ----------------------------------------------------------------------
 
@@ -115,33 +115,34 @@ class OutputSplitter(object):
 
 # ----------------------------------------------------------------------
 
-class Extractor(object):
+# class Extractor(object):
 
-    def extract(self, out):
-        """
-        :param out: output file.
-        """
-        logging.debug("%s\t%s", self.id, self.title)
-        text = ''.join(self.page)
-        url = get_url(self.id)
-        header = '<doc id="%s" url="%s" title="%s" language="%s" revision="%s">\n' % (self.id, url, self.title, self.language, self.revision)
-        # Separate header from text with a newline.
-        header += self.title + '\n\n'
-        header = header.encode('utf-8')
-        footer = "\n</doc>\n"
-        out.write(header)
-        text = clean(self, text)
-        for line in compact(text):
-            out.write(line.encode('utf-8'))
-            out.write('\n')
-        out.write(footer)
+#     def extract(self, out):
+#         """
+#         :param out: output file.
+#         """
+#         logging.debug("%s\t%s", self.id, self.title)
+#         text = ''.join(self.page)
+#         url = get_url(self.id)
+#         header = '<doc id="%s" url="%s" title="%s" language="%s" revision="%s">\n' % (self.id, url, self.title, self.language, self.revision)
+#         # Separate header from text with a newline.
+#         header += self.title + '\n\n'
+#         header = header.encode('utf-8')
+#         footer = "\n</doc>\n"
+#         out.write(header)
+#         text = clean(self, text)
+#         for line in compact(text):
+#             out.write(line.encode('utf-8'))
+#             out.write('\n')
+#         out.write(footer)
 
-def process_dump(input_file, out_file, file_size, file_compress):
+def process_dump(input_file, out_file, file_size, file_compress, to_json):
     """
     :param input_file: name of the wikipedia dump file; '-' to read from stdin
     :param out_file: directory where to store extracted data, or '-' for stdout
     :param file_size: max size of each extracted file, or None for no max (one file)
     :param file_compress: whether to compress files with bzip.
+    :param to_json: whether to write output in json format instead of the default <doc> format
     """
 
     if input_file == '-':
@@ -159,10 +160,11 @@ def process_dump(input_file, out_file, file_size, file_compress):
 
     # process dump
     # format
-    # {"index":{"_type":"page","_id":"3825914"}}
+    # {"index":{"_type":"_doc","_id":"3825914"}}
     # {"namespace":0,"title":TITLE,"timestamp":"2014-06-29T15:51:09Z","text":TEXT,...}
     while True:
         line = input.readline()
+        print(line)
         if not line:
             break
         index = json.loads(line)
@@ -171,16 +173,28 @@ def process_dump(input_file, out_file, file_size, file_compress):
         id = index['index']['_id']
         language = content['language']
         revision = content['version']
-        if type == 'page' and content['namespace'] == 0:
+        if type == '_doc' and content['namespace'] == 0:
             title = content['title']
             text = content['text']
             # drop references:
             # ^ The Penguin Dictionary
             text = re.sub(r'  \^ .*', '', text)
             url = urlbase + 'wiki?curid=' + id
-            header = '<doc id="%s" url="%s" title="%s" language="%s" revision="%s">\n' % (id, url, title, language, revision)
-            page = header + title + '\n\n' + text + '\n</doc>\n'
-            output.write(page.encode('utf-8'))
+            if to_json:
+                json_data = {
+                    'id': id,
+                    'url': url,
+                    'title': title,
+                    'text': text,
+                }
+                # print(json_data["text"])
+                out_str = json.dumps(json_data)
+                output.write(out_str)
+                output.write('\n')
+            else:
+                header = '<doc id="%s" url="%s" title="%s" language="%s" revision="%s">\n' % (id, url, title, language, revision)
+                page = header + title + '\n\n' + text + '\n</doc>\n'
+                output.write(page.encode('utf-8'))
 
 # ----------------------------------------------------------------------
 
@@ -201,6 +215,8 @@ def main():
                         metavar="n[KMG]")
     groupO.add_argument("-c", "--compress", action="store_true",
                         help="compress output files using bzip")
+    groupO.add_argument("--json", action="store_true",
+                        help="write output in json format instead of the default <doc> format")
 
     groupP = parser.add_argument_group('Processing')
     groupP.add_argument("-ns", "--namespaces", default="", metavar="ns1,ns2",
@@ -241,7 +257,7 @@ def main():
             logging.error('Could not create: %s', output_path)
             return
 
-    process_dump(input_file, output_path, file_size, args.compress)
+    process_dump(input_file, output_path, file_size, args.compress, args.json)
 
 
 if __name__ == '__main__':

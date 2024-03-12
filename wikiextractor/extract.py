@@ -77,11 +77,11 @@ def clean(extractor, text, expand_templates=False, html_safe=True):
     :param html_safe: whether to convert reserved HTML characters to entities.
     @return: the cleaned text.
     """
-
     if expand_templates:
         # expand templates
         # See: http://www.mediawiki.org/wiki/Help:Templates
         text = extractor.expandTemplates(text)
+        # print(text)
     else:
         # Drop transclusions (template, parser functions)
         text = dropNested(text, r'{{', r'}}')
@@ -925,8 +925,8 @@ class Extractor():
     toJson = False
 
     ##
-    # Obtained from TemplateNamespace
-    templatePrefix = ''
+    # Hardcoded Template prefix
+    templatePrefix = 'Template:'
 
     def __init__(self, id, revid, urlbase, title, page):
         """
@@ -986,6 +986,7 @@ class Extractor():
                 'title': self.title,
                 'text': "\n".join(text)
             }
+            # print(json_data["text"])
             out_str = json.dumps(json_data)
             out.write(out_str)
             out.write('\n')
@@ -1041,6 +1042,7 @@ class Extractor():
         res = ''
         if len(self.frame) >= self.maxTemplateRecursionLevels:
             self.recursion_exceeded_1_errs += 1
+            print(f"Template recursion exceeded {self.maxTemplateRecursionLevels}")
             return res
 
         # logging.debug('<expandTemplates ' + str(len(self.frame)))
@@ -1048,6 +1050,8 @@ class Extractor():
         cur = 0
         # look for matching {{...}}
         for s, e in findMatchingBraces(wikitext, 2):
+            print(f"expandTemplate: {wikitext[s:e]}")
+            print(f"Result: {self.expandTemplate(wikitext[s + 2:e - 2])}")
             res += wikitext[cur:s] + self.expandTemplate(wikitext[s + 2:e - 2])
             cur = e
         # leftover
@@ -1280,6 +1284,7 @@ class Extractor():
         value = self.expandTemplates(instantiated)
         self.frame.pop()
         # logging.debug('   INVOCATION> %s %d %s', title, len(self.frame), value)
+        print(value)
         return value
 
 
@@ -1707,23 +1712,24 @@ def sharp_switch(primary, *params):
 
 # Extension Scribuntu
 def sharp_invoke(module, function, frame):
-    functions = modules.get(module)
-    if functions:
-        funct = functions.get(function)
-        if funct:
-            # find parameters in frame whose title is the one of the original
-            # template invocation
-            templateTitle = fullyQualifiedTemplateTitle(function)
-            if not templateTitle:
-                logging.warn("Template with empty title")
-            pair = next((x for x in frame if x[0] == templateTitle), None)
-            if pair:
-                params = pair[1]
-                # extract positional args
-                params = [params.get(str(i + 1)) for i in range(len(params))]
-                return funct(*params)
-            else:
-                return funct()
+    print('sharp_invoke', module, function, frame)
+    # functions = modules.get(module)
+    # if functions:
+    #     funct = functions.get(function)
+    #     if funct:
+    #         # find parameters in frame whose title is the one of the original
+    #         # template invocation
+    #         templateTitle = fullyQualifiedTemplateTitle(function)
+    #         if not templateTitle:
+    #             logging.warn("Template with empty title")
+    #         pair = next((x for x in frame if x[0] == templateTitle), None)
+    #         if pair:
+    #             params = pair[1]
+    #             # extract positional args
+    #             params = [params.get(str(i + 1)) for i in range(len(params))]
+    #             return funct(*params)
+    #         else:
+    #             return funct()
     return ''
 
 
@@ -1780,21 +1786,19 @@ def callParserFunction(functionName, args, frame):
     :param args: the arguments to the function
     :return: the result of the invocation, None in case of failure.
 
-    http://meta.wikimedia.org/wiki/Help:ParserFunctions
+    https://www.mediawiki.org/wiki/Help:Extension:ParserFunctions
     """
 
-    try:
-        if functionName == '#invoke':
-            # special handling of frame
-            ret = sharp_invoke(args[0].strip(), args[1].strip(), frame)
-            # logging.debug('parserFunction> %s %s', args[1], ret)
-            return ret
-        if functionName in parserFunctions:
-            ret = parserFunctions[functionName](*args)
-            # logging.debug('parserFunction> %s(%s) %s', functionName, args, ret)
-            return ret
-    except:
-        return ""  # FIXME: fix errors
+    if functionName == '#invoke':
+        # special handling of frame
+        ret = sharp_invoke(args[0].strip(), args[1].strip(), frame)
+        # logging.debug('parserFunction> %s %s', args[1], ret)
+        return ret
+
+    if functionName in parserFunctions:
+        ret = parserFunctions[functionName](*args)
+        # logging.debug('parserFunction> %s(%s) %s', functionName, args, ret)
+        return ret
 
     return ""
 

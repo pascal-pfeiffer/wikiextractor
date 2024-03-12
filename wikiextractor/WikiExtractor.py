@@ -78,7 +78,7 @@ knownNamespaces = set(['Template'])
 ##
 # The namespace used for template definitions
 # It is the name associated with namespace key=10 in the siteinfo header.
-templateNamespace = ''
+TEMPLATE_NAMESPACE = 'Template'
 
 ##
 # The namespace used for module definitions
@@ -196,7 +196,6 @@ def load_templates(file, output_file=None):
     :param output_file: file where to save templates and modules.
     :return: number of templates loaded.
     """
-    global templateNamespace
     global moduleNamespace, modulePrefix
     modulePrefix = moduleNamespace + ':'
     articles = 0
@@ -219,13 +218,6 @@ def load_templates(file, output_file=None):
             page = []
         elif tag == 'title':
             title = m.group(3)
-            if not output_file and not templateNamespace:  # do not know it yet
-                # we reconstruct it from the first title
-                colon = title.find(':')
-                if colon > 1:
-                    templateNamespace = title[:colon]
-                    Extractor.templatePrefix = title[:colon + 1]
-            # FIXME: should reconstruct also moduleNamespace
         elif tag == 'text':
             inText = True
             line = line[m.start(3):m.end(3)]
@@ -299,6 +291,7 @@ def collect_pages(text):
         if not m:
             continue
         tag = m.group(2)
+        # print(tag)
         if tag == 'page':
             page = []
             redirect = False
@@ -323,7 +316,7 @@ def collect_pages(text):
         elif inText:
             page.append(line)
         elif tag == '/page':
-            if (id != last_id and not redirect and not title.startswith(templateNamespace)):
+            if (id != last_id and not redirect):
                 yield (id, revid, title, page)
                 last_id = id
             id = ''
@@ -346,7 +339,6 @@ def process_dump(input_file, template_file, out_file, file_size, file_compress,
     :param expand_templates: whether to expand templates.
     """
     global knownNamespaces
-    global templateNamespace
     global moduleNamespace, modulePrefix
 
     urlbase = ''                # This is obtained from <siteinfo>
@@ -367,10 +359,7 @@ def process_dump(input_file, template_file, out_file, file_size, file_compress,
             urlbase = base[:base.rfind("/")]
         elif tag == 'namespace':
             knownNamespaces.add(m.group(3))
-            if re.search('key="10"', line):
-                templateNamespace = m.group(3)
-                Extractor.templatePrefix = templateNamespace + ':'
-            elif re.search('key="828"', line):
+            if re.search('key="828"', line):
                 moduleNamespace = m.group(3)
                 modulePrefix = moduleNamespace + ':'
         elif tag == '/siteinfo':
@@ -618,6 +607,7 @@ def main():
     # templateCache = manager.dict()
 
     if args.article:
+        print("Debugging article", input_file)
         if args.templates:
             if os.path.exists(args.templates):
                 with open(args.templates) as file:

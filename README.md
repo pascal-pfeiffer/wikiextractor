@@ -1,4 +1,8 @@
 # WikiExtractor
+
+python -m wikiextractor.extractPage --id 51503872 /home/pascal/llm-traindata/enwiki-20230701-pages-articles-multistream.xml.bz2
+python -m wikiextractor.WikiExtractor --json --article /home/pascal/wikiextractor/samples/free_neutron_decay.txt --templates /home/pascal/llm-traindata/templates.txt
+
 [WikiExtractor.py](http://medialab.di.unipi.it/wiki/Wikipedia_Extractor) is a Python script that extracts and cleans text from a [Wikipedia database backup dump](https://dumps.wikimedia.org/), e.g. https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2 for English.
 
 The tool is written in Python and requires Python 3 but no additional library.
